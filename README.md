@@ -4,6 +4,14 @@ Build tools and reproducible development environment experiments with Bazel, Nix
 
 Last verified: 2026-06-20
 
+## Runnable Starter Project
+
+Run the tiny build runner first, then port the same target graph to Make, Bazel, and Nix:
+
+```bash
+python3 projects/native-build-runner/build.py all
+```
+
 ## Why This Repo Exists
 
 Application repos should teach application code. Platform repos should teach operations. This repo is for the layer in between:
