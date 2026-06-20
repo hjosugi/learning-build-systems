@@ -22,6 +22,21 @@ Application repos should teach application code. Platform repos should teach ope
 - Nix flakes for pinned development environments where appropriate
 - GitHub Actions for CI experiments
 
+## What This Repo Teaches
+
+This repo answers one practical question: when does extra build tooling pay for itself?
+
+Each example should compare:
+
+- language-native tool only
+- Bazel or Nix enhancement
+- local developer experience
+- CI parity
+- cache and reproducibility benefits
+- extra complexity introduced
+
+The goal is not to force Bazel or Nix everywhere. The goal is to learn when they improve a project and when ordinary Maven, Gradle, pnpm, uv, or Go modules are enough.
+
 ## Learning Path
 
 1. Build system fundamentals
@@ -74,6 +89,21 @@ templates/
 - application feature code
 - deployment and runbooks; put those in `learning-platform-engineering`
 - design pattern examples; put those in `learning-design-patterns-polyglot`
+
+## Study Loop
+
+1. build a tiny native project first
+2. add a Bazel or Nix version
+3. write down what became more reproducible
+4. write down what became harder
+5. add CI only after the local command is clear
+
+## First Milestones
+
+1. Add one Java Bazel example and compare it with Maven/Gradle.
+2. Add one Go Bazel example and compare it with Go modules.
+3. Add one Node dev shell and one Python dev shell with Nix.
+4. Add a troubleshooting note for cache misses and dependency pinning.
 
 ## References
 
