@@ -1,0 +1,9 @@
+# Build outputs
+out/
+
+# mini_build incremental cache (persisted next to the manifest)
+.mini_build_cache.json
+
+# Python bytecode caches
+__pycache__/
+*.pyc
