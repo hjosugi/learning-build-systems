@@ -10,6 +10,14 @@ Run the tiny build runner first, then port the same target graph to Make, Bazel,
 
 ```bash
 python3 projects/native-build-runner/build.py all
+python3 projects/native-build-runner/test_build.py
+python3 projects/groovy-unit-test-lab/check_groovy.py
+```
+
+Groovy hands-on:
+
+```bash
+groovy projects/groovy-unit-test-lab/CalculatorTest.groovy
 ```
 
 ## Why This Repo Exists

@@ -16,7 +16,12 @@ python3 projects/native-build-runner/build.py build
 python3 projects/native-build-runner/build.py test
 ```
 
+## Unit Test
+
+```bash
+python3 projects/native-build-runner/test_build.py
+```
+
 ## Exercise
 
 Port the same target graph to Make, Bazel, and Nix. Keep the commands and outputs comparable.
-
