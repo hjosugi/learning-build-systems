@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+bazel-*
+node_modules/
+dist/
+build/
+target/
+.venv/
+__pycache__/
+.direnv/
+.idea/
+.vscode/
