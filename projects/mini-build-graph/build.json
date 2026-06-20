@@ -1,0 +1,40 @@
+{
+  "targets": [
+    {
+      "name": "name_obj",
+      "inputs": [
+        "src/name.txt"
+      ],
+      "action": "concat",
+      "output": "out/name.obj"
+    },
+    {
+      "name": "greeting_obj",
+      "inputs": [
+        "src/greeting.txt"
+      ],
+      "action": "concat",
+      "output": "out/greeting.obj"
+    },
+    {
+      "name": "app",
+      "deps": [
+        "name_obj",
+        "greeting_obj"
+      ],
+      "action": "count_lines",
+      "output": "out/app.txt"
+    },
+    {
+      "name": "report",
+      "inputs": [
+        "src/notes.txt"
+      ],
+      "deps": [
+        "app"
+      ],
+      "action": "count_lines",
+      "output": "out/report.txt"
+    }
+  ]
+}

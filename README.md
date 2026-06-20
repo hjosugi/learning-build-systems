@@ -2,7 +2,15 @@
 
 Build tools and reproducible development environment experiments with Bazel, Nix, language-native build tools, and CI integration.
 
-Last verified: 2026-06-20
+Last verified: 2026-06-21
+
+## Development Environment
+
+If Bazel/Bazelisk, Groovy, or Java are missing locally, enter the Nix shell:
+
+```bash
+nix develop
+```
 
 ## Runnable Starter Project
 
@@ -14,10 +22,48 @@ python3 projects/native-build-runner/test_build.py
 python3 projects/groovy-unit-test-lab/check_groovy.py
 ```
 
+Then build the real thing: a tiny Bazel/Nix-flavored build engine with a
+dependency DAG, a persisted content-addressed cache, incremental rebuilds,
+`--explain`, and a hermeticity check. See
+[projects/mini-build-graph/README.md](projects/mini-build-graph/README.md):
+
+```bash
+python3 projects/mini-build-graph/demo.py
+python3 -m unittest discover -s projects/mini-build-graph -p 'test_*.py'
+```
+
 Groovy hands-on:
 
 ```bash
 groovy projects/groovy-unit-test-lab/CalculatorTest.groovy
+```
+
+## Target Hands-On Projects
+
+Bazel:
+
+```bash
+python3 projects/bazel-python-lab/check_bazel.py
+```
+
+When Bazel or Bazelisk is installed:
+
+```bash
+cd projects/bazel-python-lab
+bazel test //...
+```
+
+Nix:
+
+```bash
+python3 projects/nix-devshell-lab/check_nix.py
+```
+
+When Nix is installed:
+
+```bash
+cd projects/nix-devshell-lab
+nix develop
 ```
 
 ## Why This Repo Exists
@@ -127,3 +173,4 @@ templates/
 - Bazel build concepts: https://bazel.build/concepts/build-ref
 - Nix learning resources: https://nixos.org/learn/
 - nix.dev: https://nix.dev/
+- Curated primary sources: [docs/learning-resources.md](docs/learning-resources.md)
