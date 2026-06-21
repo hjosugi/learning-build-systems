@@ -1,0 +1,2 @@
+module(name = "learning_bazel_python_lab", version = "0.1.0")
+
